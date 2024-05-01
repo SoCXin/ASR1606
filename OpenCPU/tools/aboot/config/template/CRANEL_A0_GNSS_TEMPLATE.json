@@ -1,0 +1,438 @@
+{
+  "name": "CRANEL_A0_GNSS_TEMPLATE",
+  "commands": [
+    {
+      "command": "require",
+      "name": "product",
+      "type": "value",
+      "group": "0"
+    },
+    {
+      "command": "require",
+      "name": "version",
+      "type": "value",
+      "group": "0"
+    },
+    {
+      "command": "require",
+      "name": "version-bootrom",
+      "type": "value",
+      "group": "0"
+    },
+    {
+      "command": "progress",
+      "name": "weight",
+      "type": "value",
+      "group": "0"
+    },
+    {
+      "command": "call",
+      "name": "preboot",
+      "type": "image",
+      "group": "0"
+    },
+    {
+      "command": "call",
+      "name": "flasher",
+      "type": "image",
+      "group": "0"
+    },
+    {
+      "command": "partition",
+      "name": "flashinfo",
+      "type": "image",
+      "group": "0"
+    },
+    {
+      "command": "partition",
+      "name": "partition",
+      "type": "image",
+      "group": "0"
+    },
+    {
+      "command": "flash",
+      "name": "bootloader",
+      "type": "image",
+      "partition": "bootloader",
+      "group": "1"
+    },
+    {
+      "command": "flash",
+      "name": "partition",
+      "type": "image",
+      "partition": "ptable",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "fwcerts",
+      "type": "image",
+      "partition": "fwcerts",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "rd",
+      "type": "image",
+      "partition": "rd",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "apn",
+      "type": "image",
+      "partition": "apn",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "cp",
+      "type": "image",
+      "partition": "cp",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "dsp",
+      "type": "image",
+      "partition": "dsp",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "rfbin",
+      "type": "image",
+      "partition": "rfbin",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "logo",
+      "type": "image",
+      "partition": "logo",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "jacana_fw",
+      "type": "image",
+      "partition": "jacana_fw",
+      "group": "2"
+    },
+    {
+      "command": "flash",
+      "name": "updater",
+      "type": "image",
+      "partition": "updater",
+      "group": "2"
+    },
+    {
+      "command": "erase",
+      "partition": "fota_param",
+      "group": "3"
+    },
+    {
+      "command": "erase",
+      "partition": "fota_pkg",
+      "group": "3"
+    },
+    {
+      "command": "erase",
+      "partition": "jacana_pvt",
+      "group": "3"
+    },
+    {
+      "command": "flash",
+      "name": "user_app",
+      "type": "image",
+      "partition": "user_app",
+      "group": "3"
+    },
+    {
+      "command": "erase",
+      "partition": "nvm",
+      "group": "4"
+    },
+    {
+      "command": "erase",
+      "partition": "factory",
+      "productionOnly": true,
+      "group": "5"
+    },
+    {
+      "command": "fuse",
+      "name": "fuse",
+      "type": "image",
+      "productionOnly": true,
+      "group": "5"
+    }
+  ],
+  "images": [
+    {
+      "name": "preboot_bin",
+      "image": "preboot.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "boot2_bin",
+      "image": "boot2.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "flasher_bin",
+      "image": "flasher.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "boot33_bin",
+      "image": "boot33.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "cp",
+      "image": "cp.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "dsp",
+      "image": "dsp.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "rfbin",
+      "image": "rf.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "logo",
+      "image": "logo.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "jacana_fw",
+      "image": "jacana_fw.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "updater",
+      "image": "updater.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "user_app",
+      "image": "user_app.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "rd",
+      "image": "ReliableData.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "apn",
+      "image": "apn.bin",
+      "io": "in",
+      "format": "raw"
+    },
+    {
+      "name": "flashinfo",
+      "image": "flashinfo.bin",
+      "io": "out",
+      "format": "finf"
+    },
+    {
+      "name": "partition",
+      "image": "partition.bin",
+      "io": "out",
+      "format": "aptb"
+    },
+    {
+      "name": "fuse",
+      "image": "fuse.dat",
+      "io": "out",
+      "format": "fuse"
+    },
+    {
+      "name": "preboot_lzma",
+      "image": "preboot.lzma",
+      "io": "out",
+      "format": "lzma",
+      "lzma": {
+        "image": "preboot_bin"
+      }
+    },
+    {
+      "name": "boot2_lzma",
+      "image": "boot2.lzma",
+      "io": "out",
+      "format": "lzma",
+      "lzma": {
+        "image": "boot2_bin"
+      }
+    },
+    {
+      "name": "flasher_lzma",
+      "image": "flasher.lzma",
+      "io": "out",
+      "format": "lzma",
+      "lzma": {
+        "image": "flasher_bin"
+      }
+    },
+    {
+      "name": "preboot",
+      "image": "preboot.img",
+      "io": "out",
+      "format": "fip",
+      "fip": {
+        "images": [
+          {
+            "id": "BL2_IMAGE_ID",
+            "image": "preboot_lzma"
+          }
+        ],
+        "callBoot2": true,
+        "certOnly": false
+      }
+    },
+    {
+      "name": "flasher",
+      "image": "flasher.img",
+      "io": "out",
+      "format": "fip",
+      "fip": {
+        "images": [
+          {
+            "id": "BL2_IMAGE_ID",
+            "image": "flasher_lzma"
+          }
+        ],
+        "callBoot2": true,
+        "certOnly": false
+      }
+    },
+    {
+      "name": "fwcerts",
+      "image": "fwcerts.bin",
+      "io": "out",
+      "format": "fip",
+      "fip": {
+        "images": [
+          {
+            "id": "CP_IMAGE_ID",
+            "image": "cp"
+          },
+          {
+            "id": "DSP_IMAGE_ID",
+            "image": "dsp"
+          }
+        ],
+        "callBoot2": false,
+        "certOnly": true
+      }
+    },
+    {
+      "name": "ntos_pkey",
+      "image": "ntos.pkey",
+      "io": "out",
+      "format": "pkey",
+      "pkey": {
+        "name": "nt-os-key"
+      }
+    },
+    {
+      "name": "boot33_pkey",
+      "image": "boot33.pkey",
+      "io": "out",
+      "format": "aggr",
+      "aggr": [
+        {
+          "image": "boot33_bin"
+        },
+        {
+          "image": "ntos_pkey"
+        }
+      ]
+    },
+    {
+      "name": "boot33_lzma",
+      "image": "boot33.lzma",
+      "io": "out",
+      "format": "lzma",
+      "lzma": {
+        "image": "boot33_pkey"
+      }
+    },
+    {
+      "name": "bootloader_img",
+      "image": "bootloader.img",
+      "io": "out",
+      "format": "fip",
+      "fip": {
+        "images": [
+          {
+            "id": "BL2_IMAGE_ID",
+            "image": "boot2_lzma"
+          },
+          {
+            "id": "BL33_IMAGE_ID",
+            "image": "boot33_lzma"
+          }
+        ],
+        "callBoot2": true,
+        "certOnly": false
+      }
+    },
+    {
+      "name": "bootloader",
+      "image": "bootloader.ubi",
+      "io": "out",
+      "format": "ubi",
+      "ubi": [
+        {
+          "volume": "flashinfo",
+          "image": "flashinfo",
+          "type": "static"
+        },
+        {
+          "volume": "partition",
+          "image": "partition",
+          "type": "static"
+        },
+        {
+          "volume": "preboot",
+          "image": "preboot",
+          "type": "static"
+        },
+        {
+          "volume": "bootloader",
+          "image": "bootloader_img",
+          "type": "static"
+        }
+      ]
+    }
+  ],
+  "fuse": {
+    "bankNum": 4,
+    "bankSize": 256,
+    "fuseBits": [[], [], [], []]
+  },
+  "values": {
+    "product": "arom-tiny",
+    "version": "",
+    "version-bootrom": "",
+    "weight": 0
+  }
+}

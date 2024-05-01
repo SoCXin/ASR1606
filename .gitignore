@@ -11,12 +11,11 @@ Debug
 *~
 ~*
 .settings
-# .mxproject
-# Change*
-# CHANGE*
-# COPY*
-# *CONTRIBU*
-# LICENSE*
+Change*
+CHANGE*
+COPY*
+*CONTRIBU*
+LICENSE*
 *.swp
 *.lck
 *.log
@@ -28,8 +27,10 @@ Debug
 *.hex
 *.bin
 *.bak
-# *.txt
+*.txt
 Obj
 List
 Exe
 TEST/
+out/
+ML302A

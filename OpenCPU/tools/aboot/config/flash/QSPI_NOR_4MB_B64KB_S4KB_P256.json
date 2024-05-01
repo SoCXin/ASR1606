@@ -1,0 +1,31 @@
+{
+  "name": "QSPI_NOR_4MB_B64KB_S4KB_P256",
+  "type": "QSPI_NOR",
+  "minIoSize": 1,
+  "pageSize": 256,
+  "pebSize": "4KiB",
+  "sectorSize": "4KiB",
+  "blockSize": "64KiB",
+  "flashSize": "4MiB",
+  "erasedValue": "0xFF",
+  "devices": [
+    {
+      "name": "GD25LE32E",
+      "manufacturer": "GigaDevice",
+      "vendorId": "0xC8",
+      "deviceId": "0x6016"
+    },
+    {
+      "name": "P25Q32SLE",
+      "manufacturer": "PUYA",
+      "vendorId": "0x85",
+      "deviceId": "0x6016"
+    },
+    {
+      "name": "XM25LU32C",
+      "manufacturer": "XMC",
+      "vendorId": "0x20",
+      "deviceId": "0x5016"
+    }
+  ]
+}

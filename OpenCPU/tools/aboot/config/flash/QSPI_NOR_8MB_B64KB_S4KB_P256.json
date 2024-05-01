@@ -1,0 +1,55 @@
+{
+  "name": "QSPI_NOR_8MB_B64KB_S4KB_P256",
+  "type": "QSPI_NOR",
+  "minIoSize": 1,
+  "pageSize": 256,
+  "pebSize": "4KiB",
+  "sectorSize": "4KiB",
+  "blockSize": "64KiB",
+  "flashSize": "8MiB",
+  "erasedValue": "0xFF",
+  "devices": [
+    {
+      "name": "GD25LQ64C",
+      "manufacturer": "GigaDevice",
+      "vendorId": "0xC8",
+      "deviceId": "0x6017"
+    },
+    {
+      "name": "W25Q64JW",
+      "manufacturer": "Winbond",
+      "vendorId": "0xEF",
+      "deviceId": "0x6017"
+    },
+    {
+      "name": "FM25M64C",
+      "manufacturer": "Dosilicon",
+      "vendorId": "0xF8",
+      "deviceId": "0x4317"
+    },
+    {
+      "name": "XM25QU64B",
+      "manufacturer": "XMC",
+      "vendorId": "0x20",
+      "deviceId": "0x5017"
+    },
+    {
+      "name": "XM25QU64C",
+      "manufacturer": "XMC",
+      "vendorId": "0x20",
+      "deviceId": "0x4117"
+    },
+    {
+      "name": "P25Q64LE",
+      "manufacturer": "PUYA",
+      "vendorId": "0x85",
+      "deviceId": "0x6017"
+    },
+    {
+      "name": "ZB25LQ64A",
+      "manufacturer": "ZBIT",
+      "vendorId": "0x5E",
+      "deviceId": "0x7017"
+    }
+  ]
+}

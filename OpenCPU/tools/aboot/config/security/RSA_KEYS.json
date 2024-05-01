@@ -1,0 +1,45 @@
+{
+  "keyAlg": "rsa",
+  "keys": [
+    {
+      "option": "--rot-key",
+      "param": "rsa_root_key.pem",
+      "description": "Root Of Trust key"
+    },
+    {
+      "option": "--trusted-world-key",
+      "param": "rsa_trusted_world_key.pem",
+      "description": "Trusted World key"
+    },
+    {
+      "option": "--non-trusted-world-key",
+      "param": "rsa_non_trusted_world_key.pem",
+      "description": "Non Trusted World key"
+    },
+    {
+      "option": "--scp-fw-key",
+      "param": "rsa_scp_fw_key.pem",
+      "description": "SCP Firmware Content Certificate key"
+    },
+    {
+      "option": "--soc-fw-key",
+      "param": "rsa_soc_fw_key.pem",
+      "description": "SoC Firmware Content Certificate key"
+    },
+    {
+      "option": "--tos-fw-key",
+      "param": "rsa_tos_fw_key.pem",
+      "description": "Trusted OS Firmware Content Certificate key"
+    },
+    {
+      "option": "--nt-fw-key",
+      "param": "rsa_nt_fw_key.pem",
+      "description": "Non Trusted Firmware Content Certificate key"
+    },
+    {
+      "option": "--nt-os-key",
+      "param": "rsa_nt_os_key.pem",
+      "description": "Non Trusted OS Content Certificate key"
+    }
+  ]
+}

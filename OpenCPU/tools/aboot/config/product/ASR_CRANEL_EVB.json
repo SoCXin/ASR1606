@@ -1,0 +1,92 @@
+{
+  "name": "ASR_CRANEL_EVB",
+  "product": "arom-tiny",
+  "version": "0.5",
+  "version-bootrom": "2021.10.16",
+  "template": "CRANEL_A0_TEMPLATE",
+  "layout": "CRANEL_SINGLE_FLASH_LAYOUT_4M",
+  "keyAlg": "rsa",
+  "hashAlg": "sha256",
+  "secureBoot": false,
+  "firmwareGenerator": {
+    "name": "crane",
+    "call-max-download-size": "60KiB",
+    "flash-max-download-size": "1MiB",
+    "use-lzma-compression": true
+  },
+  "fota": ["system"],
+  "variants": [
+    {
+      "name": "CRANEL_A0_04MB",
+      "flashes": [
+        {
+          "name": "qspi",
+          "port": "QSPI",
+          "flash": "QSPI_NOR_4MB_B64KB_S4KB_P256"
+        }
+      ],
+      "template": "CRANEL_A0_TEMPLATE",
+      "layout": "CRANEL_SINGLE_FLASH_LAYOUT_4M"
+    },
+    {
+      "name": "CRANEL_A0_GNSS_04MB",
+      "flashes": [
+        {
+          "name": "qspi",
+          "port": "QSPI",
+          "flash": "QSPI_NOR_4MB_B64KB_S4KB_P256"
+        }
+      ],
+      "template": "CRANEL_A0_GNSS_TEMPLATE",
+      "layout": "CRANEL_SINGLE_FLASH_LAYOUT_4M_GNSS"
+    },
+    {
+      "name": "CRANEL_A0_08MB",
+      "flashes": [
+        {
+          "name": "qspi",
+          "port": "QSPI",
+          "flash": "QSPI_NOR_8MB_B64KB_S4KB_P256"
+        }
+      ],
+      "template": "CRANEL_A0_TEMPLATE",
+      "layout": "CRANEL_SINGLE_FLASH_LAYOUT_8M"
+    },
+    {
+      "name": "CRANEL_A0_GNSS_08MB",
+      "flashes": [
+        {
+          "name": "qspi",
+          "port": "QSPI",
+          "flash": "QSPI_NOR_8MB_B64KB_S4KB_P256"
+        }
+      ],
+      "template": "CRANEL_A0_GNSS_TEMPLATE",
+      "layout": "CRANEL_SINGLE_FLASH_LAYOUT_8M_GNSS"
+    },
+    {
+      "name": "CRANEL_A0_FS_08MB",
+      "flashes": [
+        {
+          "name": "qspi",
+          "port": "QSPI",
+          "flash": "QSPI_NOR_8MB_B64KB_S4KB_P256"
+        }
+      ],
+      "template": "CRANEL_A0_FS_TEMPLATE",
+      "layout": "CRANEL_SINGLE_FLASH_LAYOUT_8M"
+    },
+    {
+      "name": "CRANEL_A0_FS_GNSS_08MB",
+      "flashes": [
+        {
+          "name": "qspi",
+          "port": "QSPI",
+          "flash": "QSPI_NOR_8MB_B64KB_S4KB_P256"
+        }
+      ],
+      "template": "CRANEL_A0_FS_GNSS_TEMPLATE",
+      "layout": "CRANEL_SINGLE_FLASH_LAYOUT_8M_GNSS"
+    }
+  ]
+}

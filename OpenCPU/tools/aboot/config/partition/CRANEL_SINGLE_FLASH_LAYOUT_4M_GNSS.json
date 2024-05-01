@@ -1,0 +1,116 @@
+{
+  "name": "CRANEL_SINGLE_FLASH_LAYOUT_4M_GNSS",
+  "partitions": [
+    {
+      "name": "qspi",
+      "format": "flash",
+      "vstart": "0x80000000",
+      "partitions": [
+        {
+          "name": "bootloader",
+          "format": "ubi",
+          "size": "88KiB"
+        },
+        {
+          "name": "system",
+          "format": "part",
+          "size": "0",
+          "partitions": [
+            {
+              "name": "ptable",
+              "format": "raw",
+              "size": "4KiB"
+            },
+            {
+              "name": "fwcerts",
+              "format": "raw",
+              "size": "12KiB"
+            },
+            {
+              "name": "rd",
+              "format": "raw",
+              "size": "32KiB"
+            },
+            {
+              "name": "apn",
+              "format": "raw",
+              "size": "32KiB"
+            },
+            {
+              "name": "cp",
+              "format": "raw",
+              "size": "0"
+            },
+            {
+              "name": "dsp",
+              "format": "raw",
+              "size": "0"
+            },
+            {
+              "name": "rfbin",
+              "format": "raw",
+              "size": "0"
+            },
+            {
+              "name": "logo",
+              "format": "raw",
+              "size": "0"
+            },
+			{
+              "name": "jacana_fw",
+              "format": "raw",
+              "size": "0"
+            },
+            {
+              "name": "jacana_pvt",
+              "format": "raw",
+              "size": "128KiB"
+            }
+          ]
+        },
+        {
+          "name": "reserved",
+          "format": "raw",
+          "size": "-1"
+        },
+        {
+          "name": "fota_param",
+          "format": "raw",
+          "size": "12KiB"
+        },
+        {
+          "name": "updater",
+          "format": "raw",
+          "size": "64KiB"
+        },
+        {
+          "name": "fota_pkg",
+          "format": "raw",
+          "size": "4KiB"
+        },
+        {
+          "name": "user_app",
+          "format": "raw",
+          "size": "224KiB"
+        },
+        {
+          "name": "nvm",
+          "format": "raw",
+          "size": "128KiB"
+        },
+        {
+          "name": "factory",
+          "format": "part",
+          "size": "0",
+          "partitions": [
+            {
+              "name": "factory_a",
+              "format": "raw",
+              "size": "32KiB"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

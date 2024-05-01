@@ -1,0 +1,24 @@
+[Image_List]
+Number_of_Images = 4
+1_Image_Enable = 1
+1_Image_Image_ID = 0x30
+1_Image_Path = system.img
+1_Image_Flash_Entry_Address = 0x00024000
+1_Image_ID_Name = 1
+2_Image_Enable = 1
+2_Image_Image_ID = 0x31
+2_Image_Path = app.bin
+2_Image_Flash_Entry_Address = 0x006DD000
+2_Image_ID_Name = 2
+3_Image_Enable = 1
+3_Image_Image_ID = 0x32
+3_Image_Path = cusapp.bin
+3_Image_Flash_Entry_Address = 0x008DD000
+3_Image_ID_Name = 3
+4_Image_Enable = 1
+4_Image_Image_ID = 0x33
+4_Image_Path = logoapp.bin
+4_Image_Flash_Entry_Address = 0x009DD000
+4_Image_ID_Name = 4
+
+
